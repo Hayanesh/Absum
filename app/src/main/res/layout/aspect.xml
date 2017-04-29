@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="2dp"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="false">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/linearTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:clickable="true">
+
+                <LinearLayout
+                    android:background="@drawable/blue_gradient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="?selectableItemBackground"
+                        android:weightSum="3"
+                        android:orientation="horizontal"
+                        android:id="@+id/linear_top">
+                        <com.github.zagum.expandicon.ExpandIconView
+                            android:id="@+id/expand_icon"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="56dp"
+                            app:eiv_animationDuration="300"
+                            app:eiv_color="#000"
+                            app:eiv_colorLess="@color/colorAccent"
+                            app:eiv_colorMore="@color/colourAccent"
+                            app:eiv_roundedCorners="false"
+                            app:eiv_switchColor="true"
+                            app:eiv_padding="10dp"
+                            />
+                        <TextView
+                            android:id="@+id/app_name"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:paddingTop="10dp"
+                            android:text="TubeLight"
+                            android:textSize="20sp"
+                            android:typeface="sans"
+                            android:foregroundGravity="center_vertical"
+                            android:layout_weight="2"
+                            android:textColor="@android:color/background_light"
+                            android:clickable="false"
+
+
+                             android:layout_marginLeft="5dp"
+
+
+                            android:paddingLeft="5dp"
+                            android:textAlignment="viewStart" />
+                        <TextView
+                            android:background="@drawable/rounded_corner"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="-100dp"
+                            android:textSize="20sp"
+                            android:fontFamily="serif"
+                            android:padding="5dp"
+                            android:textColor="@android:color/holo_orange_light"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            />
+                        <TextView
+                            android:id="@+id/wattage"
+                            android:textSize="20sp"
+                            android:textAlignment="center"
+                            android:padding="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="67%"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:alpha="0"
+                android:layout_below="@+id/linearTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/app_below"
+                android:layout_marginTop="-5dp"
+                android:paddingLeft="10dp"
+                >
+                <TextView
+                    android:id="@+id/aspect_summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:typeface="sans"
+                    android:padding="10dp" />
+
+            </LinearLayout>
+                </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

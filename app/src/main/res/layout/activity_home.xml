@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:chipcloud="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:wave="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hayanesh.absum.HomeActivity">
+    <com.john.waveview.WaveView
+        android:id="@+id/wave_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colourAccent"
+        wave:above_wave_color="@android:color/white"
+        wave:blow_wave_color="@android:color/white"
+        wave:theme="@style/AppTheme"
+        wave:progress="80"
+        wave:wave_height="middle"
+        wave:wave_hz="normal"
+        wave:wave_length="little"
+        />
+    <TextView
+        android:textColor="@android:color/white"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Abstractive Summarizer"
+        android:textAlignment="center"
+        android:textSize="32sp"
+        android:id="@+id/title" />
+    <TextView
+        android:layout_below="@id/title"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="Select a product"
+        android:textAlignment="center"
+        android:typeface="serif"
+        android:textStyle="italic"
+        android:textSize="14sp"
+        android:id="@+id/sub_title" />
+    <com.skyfishjy.library.RippleBackground
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/content"
+        android:visibility="gone"
+        app:rb_color="#0099CC"
+        app:rb_radius="14dp"
+        app:rb_rippleAmount="4"
+        app:rb_duration="3000"
+        app:rb_scale="6">
+        <android.support.design.widget.FloatingActionButton
+            android:padding="20dp"
+            android:id="@+id/search"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/title"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:src="@drawable/ic_send_black_24dp"
+            android:elevation="5dp"
+            android:layout_centerInParent="true"
+            app:fabSize="normal"
+            app:backgroundTint="?attr/colorAccent"
+            android:hapticFeedbackEnabled="true" />
+    </com.skyfishjy.library.RippleBackground>
+    <LinearLayout
+        android:layout_below="@+id/sub_title"
+        android:orientation="vertical"
+        android:id="@+id/product_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <com.adroitandroid.chipcloud.ChipCloud
+        android:layout_marginBottom="40dp"
+        android:id="@+id/chip_cloud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <com.github.silvestrpredko.dotprogressbar.DotProgressBar
+        android:layout_below="@+id/chip_cloud"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/dot_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        app:amount="3"
+        app:duration="@android:integer/config_mediumAnimTime"
+        app:endColor="@color/colourPrimaryDark"
+        app:startColor="@color/colourAccent"
+        app:animationDirection="left"/>
+    </LinearLayout>
+</RelativeLayout>
